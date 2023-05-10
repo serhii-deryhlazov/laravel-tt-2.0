@@ -14,4 +14,9 @@ class Customer extends Model
         'phone',
         'email',
     ];
+
+    public function bankData()
+    {
+        return $this->hasOne(BankData::class);
+    }
 }

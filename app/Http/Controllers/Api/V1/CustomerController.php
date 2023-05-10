@@ -10,7 +10,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $customers = Customer::paginate(10);
+        $customers = Customer::with('bankData')->paginate(2);
         return response()->json($customers);
     }
 
