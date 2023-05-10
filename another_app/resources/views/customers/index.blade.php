@@ -11,6 +11,9 @@
                     <th>Phone</th>
                     <th>Birthday</th>
                     <th>Address</th>
+                    <th>Bank Name</th>
+                    <th>Account Number</th>
+                    <th>Account Age (Months)</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +23,9 @@
                         <td>{{ $customer->phone }}</td>
                         <td>{{ $customer->birthday }}</td>
                         <td>{{ $customer->address }}</td>
+                        <td>{{ $customer->bankData->bank_name }}</td>
+                        <td>{{ $customer->bankData->account_number }}</td>
+                        <td>{{ $customer->bankData->account_age }}</td>
                     </tr>
                 @endforeach
             </tbody>
