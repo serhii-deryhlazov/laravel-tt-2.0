@@ -11,6 +11,7 @@ class Customer extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'name',
         'phone',
         'email',
@@ -22,5 +23,10 @@ class Customer extends Model
     public function bankData()
     {
         return $this->hasOne(BankData::class);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'id';
     }
 }
